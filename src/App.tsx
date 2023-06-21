@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { SetState } from './pages/SetState';
+import { UseEffect } from './pages/UseEffect';
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
   {
     path: '/setState',
     element: <SetState />
+  },
+  {
+    path: '/useEffect',
+    element: <UseEffect />
   }
 ]);
 
