@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { SetState } from './pages/SetState';
 import { UseEffect } from './pages/UseEffect';
+import { StaleClosure } from './pages/StaleClosure';
 
 const router = createBrowserRouter([
   {
@@ -15,10 +16,14 @@ const router = createBrowserRouter([
   {
     path: '/useEffect',
     element: <UseEffect />
+  },
+  {
+    path: '/stale-closure',
+    element: <StaleClosure />
   }
 ]);
 
-function App() {
+const App = () => {
   return (
     <div
       style={{
@@ -32,6 +37,6 @@ function App() {
       <RouterProvider router={router} />
     </div>
   );
-}
+};
 
 export default App;
