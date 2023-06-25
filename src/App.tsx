@@ -1,8 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { SetState } from './pages/SetState';
-import { UseEffect } from './pages/UseEffect';
-import { StaleClosure } from './pages/StaleClosure';
+import { Home, SetState, UseEffect, StaleClosure, UseReducer } from './pages';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: '/stale-closure',
     element: <StaleClosure />
+  },
+  {
+    path: '/useReducer',
+    element: <UseReducer />
   }
 ]);
 

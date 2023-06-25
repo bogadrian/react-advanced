@@ -8,6 +8,7 @@ export const Home = () => {
       <Link to="/setState">Go to set state</Link>
       <Link to="/useEffect">Go to useEffect</Link>
       <Link to="/stale-closure">Go to stale closure</Link>
+      <Link to="/useReducer">Go to useReducer</Link>
     </div>
   );
 };
