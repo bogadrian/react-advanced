@@ -1,5 +1,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Home, SetState, UseEffect, StaleClosure, UseReducer } from './pages';
+import {
+  Home,
+  SetState,
+  UseEffect,
+  StaleClosure,
+  UseReducer,
+  UseCallback
+} from './pages';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: '/useReducer',
     element: <UseReducer />
+  },
+  {
+    path: '/useCallback',
+    element: <UseCallback />
   }
 ]);
 
