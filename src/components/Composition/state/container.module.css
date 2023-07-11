@@ -1,0 +1,47 @@
+.headerContainer {
+  height: 15vh;
+  width: 100%;
+  border: 2px solid #fbfbfb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboardContainer {
+  width: 20%;
+  border: 2px solid #fbfbfb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainPageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border: 2px solid #fbfbfb;
+}
+
+.selection {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts {
+  width: 80%;
+  height: auto;
+}
+.dashboardSelect {
+  width: 80%;
+  height: 60vh;
+}
+
+.user {
+  width: 90%;
+  height: 15vh;
+}

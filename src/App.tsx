@@ -5,7 +5,8 @@ import {
   UseEffect,
   StaleClosure,
   UseReducer,
-  UseCallback
+  UseCallback,
+  Composition
 } from './pages';
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: '/useCallback',
     element: <UseCallback />
+  },
+  {
+    path: '/composition',
+    element: <Composition />
   }
 ]);
 
