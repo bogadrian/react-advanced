@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { HowUseEffectWorks } from '../../components/HowUseEffectWorks';
+import { HowUseEffectWorks } from '../../components/hooks/HowUseEffectWorks';
 
 export const UseEffect = () => {
   return (

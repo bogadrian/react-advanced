@@ -1,5 +1,5 @@
-import { memo, useMemo, useState, useRef } from 'react';
-import { useInterval } from '../hooks/useInterval';
+import { memo, useMemo, useRef, useState } from 'react';
+import { useInterval } from '../useInterval';
 var randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
 
 export const HowUseEffectWorks = () => {
