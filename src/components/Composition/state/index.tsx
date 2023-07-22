@@ -1,4 +1,5 @@
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import { useData } from '../hooks/useData';
 
 import { DashboardContainer } from './Dashboard/DashboardContainer';
 import { HeaderContainer } from './Header/HeaderContainer';
@@ -11,39 +12,41 @@ import { MainPage } from './Main/MainPage';
 import { UserPosts } from './Main/UserPosts';
 
 export const AppComponent = () => {
-  const [posts, setPosts] = useState([]);
-  const [users, setUsers] = useState<{ name: string; id: string }[]>([]);
-  const [currentUser, setCurrentUser] = useState<{
-    name: string;
-    id: string;
-  }>();
+  // const [posts, setPosts] = useState([]);
+  // const [users, setUsers] = useState<{ name: string; id: string }[]>([]);
+  // const [currentUser, setCurrentUser] = useState<{
+  //   name: string;
+  //   id: string;
+  // }>();
 
-  const handleChangeCurrentUser = useCallback(
-    (value: string) => {
-      users.forEach(user => {
-        if (value === user.name) {
-          setCurrentUser(user);
-        }
-      });
-    },
-    [users]
-  );
+  // const handleChangeCurrentUser = useCallback(
+  //   (value: string) => {
+  //     users.forEach(user => {
+  //       if (value === user.name) {
+  //         setCurrentUser(user);
+  //       }
+  //     });
+  //   },
+  //   [users]
+  // );
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(p => p.json())
-      .then(p => {
-        setPosts(p);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch('https://jsonplaceholder.typicode.com/posts')
+  //     .then(p => p.json())
+  //     .then(p => {
+  //       setPosts(p);
+  //     });
+  // }, []);
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(u => u.json())
-      .then(u => {
-        setUsers(u);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch('https://jsonplaceholder.typicode.com/users')
+  //     .then(u => u.json())
+  //     .then(u => {
+  //       setUsers(u);
+  //     });
+  // }, []);
+
+  const { users, posts, currentUser, handleChangeCurrentUser } = useData();
 
   return (
     <div
